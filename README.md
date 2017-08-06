@@ -13,7 +13,7 @@ When you already have Node.js on your device, proceed to the installation of the
         npm install body-parser
 ```
 
-` NOTE: For proper viewing, update your preferred web browsers to at least the following versions: Google Chrome v.57 or Mozilla Firefox v.52 `
+For proper viewing, update your preferred web browsers to at least the following versions: Google Chrome v.57 or Mozilla Firefox v.52
 
 ### Installation
 
