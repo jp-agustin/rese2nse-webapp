@@ -1,10 +1,10 @@
 # Instructions (Developer)
 
-So far, editing and running the RESE2NSE web application only works on Linux devices.
+Currently, editing and running the RESE2NSE web application only works on Linux devices.
 
 ### Pre-requisites
 
-Before using the web application, make sure to have Node.js installed on your devices. Instructions for installing node.js can be found on its website: [Node.js](https://nodejs.org/en/download/package-manager/)
+Before using the web application, make sure to have **Node.js installed** on your devices. Instructions for installing node.js can be found on its website: [Node.js](https://nodejs.org/en/download/package-manager/)
 
 When you already have Node.js on your device, proceed to the installation of the required Node.js web application frameworks:
 
@@ -13,7 +13,7 @@ When you already have Node.js on your device, proceed to the installation of the
         npm install body-parser
 ```
 
-For proper viewing, update your preferred web browsers to at least the following versions: Google Chrome v.57 or Mozilla Firefox v.52
+For proper viewing, update your preferred web browsers to at least the following versions: **Google Chrome v.57** or **Mozilla Firefox v.52**
 
 ### Installation
 
