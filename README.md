@@ -26,4 +26,4 @@ Instructions for the node.js installation can be found on its website: [Node.js]
         nodemon server.js
 ```
 
-` NOTE: Run the web application only on the updated web browser versions for proper viewing of the web elements: At least version 57 of Google Chrome or at least version 52 of the Mozilla Firefox
+` NOTE: Run the web application only on the updated web browser versions for proper viewing of the web elements: At least version 57 of Google Chrome or at least version 52 of the Mozilla Firefox `
