@@ -17,9 +17,9 @@ For proper viewing, update your preferred web browsers to at least the following
 
 ### Installation
 
-Extract gdp.tar.gz inside your working folder. Install and set-up the GDP.
+Extract *gdp.tar.gz* inside your working folder. Install and set-up the GDP.
 
-After installing the GDP, make sure to change the system path on both the gdp_node1.py and gdp_node2.py.
+After installing the GDP, make sure to change the system path on both the *gdp_node1.py* and *gdp_node2.py*.
 
 You can now run the application using either of the following commands:
 
