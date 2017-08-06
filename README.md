@@ -6,12 +6,14 @@ So far, editing and running the RESE2NSE web application only works on Linux dev
 
 Before using the web application, make sure to have Node.js installed on your devices. Instructions for installing node.js can be found on its website: [Node.js](https://nodejs.org/en/download/package-manager/)
 
-After installing Node.js, proceed to the installation of the needed Node.js web application framework (Express and bodyParser)
+When you already have Node.js on your device, proceed to the installation of the required Node.js web application frameworks:
 
 ```
         npm install express
         npm install body-parser
 ```
+
+` NOTE: For proper viewing, update your preferred web browsers to at least the following versions: Google Chrome v.57 or Mozilla Firefox v.52 `
 
 ### Installation
 
@@ -25,5 +27,3 @@ You can now run the application using either of the following commands:
         node server
         nodemon server.js
 ```
-
-` NOTE: Run the web application only on the updated web browser versions for proper viewing of the web elements: At least version 57 of Google Chrome or at least version 52 of the Mozilla Firefox `
