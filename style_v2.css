@@ -1,0 +1,172 @@
+body {
+  padding: 0px;
+}
+
+.navbar-default {
+	font-family: 'Bree Serif', serif;
+	color: white;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	background: #3c763d;        
+}
+
+.nav-res {
+  padding-left: 50px;
+}
+
+.container-body {
+  padding-top: 0px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 5px;
+  padding: 20px;
+  padding-top: 5px;
+  grid-template-rows: auto;
+}
+
+.header {
+  justify-self: center;
+  align-self: center;
+  padding: 10px;
+}
+
+.form-container {
+  display: grid;
+}
+
+.command-mode {
+  padding-top: 15px;
+}
+
+.node-command {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 5px;
+}
+
+.node-arch {
+  font-size: 25px;
+  padding-left: 30px;
+}
+
+.node-info {
+  display: grid;
+  grid-template-columns: 20px 2fr 10fr;
+  grid-column-gap: 20px;
+  grid-template-areas: "checkbox label input";
+  padding-left: 45px
+}
+
+.node-info label {
+  grid-area: label;
+  justify-self: start;
+  align-self: center;
+  padding-left: 20px;
+}
+
+.node-info input[type="text"] {
+  grid-area: input;
+  width: 25%;
+}
+
+.node-info select {
+  grid-area: input;
+  width: 40%;
+}
+
+.node-info input[type="checkbox"] {
+  grid-area: checkbox;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+
+.node-info-case {
+  display: grid;
+  grid-template-columns: 20px 4fr 8fr;
+  grid-column-gap: 20px;
+  grid-template-areas: "checkbox label";
+  padding-left: 45px
+}
+
+.node-info-case h4, label {
+  grid-area: label;
+  justify-self: start;
+  align-self: center;
+  padding-left: 20px;
+}
+
+.node-info-case input[type="checkbox"] {
+  grid-area: checkbox;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+
+input[type="range"] {
+  width: 450px;
+}
+
+fieldset {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0;
+  min-width: 0;
+  padding: 10px;       
+  position: relative;
+  left: 28px;
+  border-radius:4px;
+  padding-left:20px;
+  padding-right:20px;
+  /*background: #e8f5e9;*/
+}
+
+.right-pane {
+  width: 960px;
+  border: 2px solid #ddd;
+  margin: 0;
+  min-width: 0;
+  padding: 10px;       
+  position: relative;
+  left: 28px;
+  border-radius:4px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+legend {
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom: 0px; 
+  width: 40%;
+  border: 1px solid #fff;
+  border-radius: 4px; 
+  padding: 5px 5px 5px 10px; 
+}
+
+button {
+  width: 20%;
+}
+
+.button-form {
+  justify-self: end;
+  align-self: center;
+  padding-right: 10px;
+}
+
+.th-res {
+  width: 50px;
+}
+
+.accord {
+  background: #58B358;
+}
+
+.accord-text {
+  color: #ffffff;
+}
+
+.panel-accord {
+  border: 2px solid #ddd;
+  padding: 10px;
+}

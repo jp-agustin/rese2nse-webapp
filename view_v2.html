@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>RESE2NSE Network Resiliency</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style_v2.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default nav-res">
+      <div class="navbar-header">
+        <h1>RESE<sup>2</sup>NSE Network Resiliency</h1>
+      </div>
+    </nav>
+
+    <div class="container-body">
+      <div class="command-mode">
+        <div class="panel-group panel-accord" id="accordion">
+          <div class="panel accord">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <h4 class="panel-title accord-text">
+                  Node 1
+                </h4>
+              </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <ul class="list-group">
+                <li class="list-group-item" id="read-node1">Read</li>
+                <li class="list-group-item" id="write-node1">Write</li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel accord">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                <h4 class="panel-title accord-text">
+                  Node 2
+                </h4>
+              </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <ul class="list-group">
+                <li class="list-group-item" id="read-node2">Read</li>
+                <li class="list-group-item" id="write-node2">Write</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <fieldset class="right-pane">
+        <legend id="Node1" class="node-arch">Node 1 Architecture</legend>
+        <legend id="Node2" class="node-arch">Node 2 Architecture</legend>
+        <form class="form-container">
+          <div class="node-command">
+              <div id="nodeNameDiv" class="node-info">
+                <label for="nodeName">Node Name</label>
+                <input type="text" name="nodeName" id="nodeName" class="form-control">
+              </div>
+
+              <div id="instCommandDiv">
+                <fieldset>
+                  <legend>Action Commands</legend>
+                  <input type="radio" name="instComm" id="none" value="none" checked> 
+                  <label for="none">N/A</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="instComm" id="start" value="start"> 
+                  <label for="start">Start</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="instComm" id="stop" value="stop">
+                  <label for="stop">Stop</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="instComm" id="instSleep" value="sleep">
+                  <label for="instSleep">Sleep</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="instComm" id="ping" value="ping">
+                  <label for="ping">Ping</label>
+                </fieldset>
+              </div>
+
+              <div id="sensingDiv">
+                <fieldset>
+                  <legend>Sensing Options</legend>
+                  <input type="radio" name="sense" id="none" value="none" checked> 
+                  <label for="none">N/A</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="sense" id="start" value="start"> 
+                  <label for="start">Start</label>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="sense" id="stop" value="stop">
+                  <label for="stop">Stop</label>
+                </fieldset>
+              </div>
+
+              <div id="nodeTypeDiv" class="node-info">
+                <input type="checkbox" name="checkType" id="checkType" value=1>
+                <label for="nodeType">Node Type</label>
+                <select name="nodeType" id="nodeType" class="form-control">
+                  <option value=0 selected>Select type</option>
+                  <option value="End Device">End Device</option>
+                  <option value="Routing Device">Routing Device</option>
+                </select>
+              </div>
+
+              <div id="powerLevelDiv" class="node-info">
+                <input type="checkbox" name="checkPowerLevel" id="checkPowerLevel" value=1>
+                <label for="powerLevel">Power Level</label>
+                <select name="powerLevel" id="powerLevel" class="form-control">
+                  <option value="none" selected>Select power level</option>
+                  <option value="0 (+10 dBm)">0 (+10 dBm)</option>
+                  <option value="1 (+12 dBm)">1 (+12 dBm)</option>
+                  <option value="2 (+14 dBm)">2 (+14 dBm)</option>
+                  <option value="3 (+16 dBm)">3 (+16 dBm)</option>
+                  <option value="4 (+18 dBm)">4 (+18 dBm)</option>
+                </select>
+              </div>
+
+              <div id="powerLevel2Div" class="node-info">
+                <input type="checkbox" name="checkPowerLevel2" id="checkPowerLevel2" value=1>
+                <label for="powerLevel2">Power Level</label>
+                <select name="powerLevel2" id="powerLevel2" class="form-control">
+                  <option value="none" selected>Select power level</option>
+                  <option value=0>0x0 &nbsp; (+4 dBm)</option>
+                  <option value=1>0x1 &nbsp; (+3.7 dBm)</option>
+                  <option value=2>0x2 &nbsp; (+3.4 dBm)</option>
+                  <option value=3>0x3 &nbsp; (+3 dBm)</option>
+                  <option value=4>0x4 &nbsp; (+2.5 dBm)</option>
+                  <option value=5>0x5 &nbsp; (+2 dBm)</option>
+                  <option value=6>0x6 &nbsp; (+1 dBm)</option>
+                  <option value=7>0x7 &nbsp; (0 dBm)</option>
+                  <option value=8>0x8 &nbsp; (-1 dBm)</option>
+                  <option value=9>0x9 &nbsp; (-2 dBm)</option>
+                  <option value=10>0xA &nbsp; (-3 dBm)</option>
+                  <option value=11>0xB &nbsp; (-4 dBm)</option>
+                  <option value=12>0xC &nbsp; (-6 dBm)</option>
+                  <option value=13>0xD &nbsp; (-8 dBm)</option>
+                  <option value=14>0xE &nbsp; (-12 dBm)</option>
+                  <option value=15>0xF &nbsp; (-17 dBm)</option>
+                </select>
+              </div>
+
+              <div id="sampleTimeDiv" class="node-info">
+                <input type="checkbox" name="checkSampleTime" id="checkSampleTime" value=1>
+                <label for="sampleTime">Sample Time</label>
+                <input type="text" name="sampleTime" id="sampleTime" class="form-control">
+              </div>
+
+              <div id="retransmissionsDiv">
+                <fieldset>
+                  <legend>No. of Retransmissions</legend>
+                    <input type="checkbox" name="checkUnicast" id="checkUnicast" value=1>
+                    <label for="unicast">Unicast (Default: 15)</label>
+                    <input type="range" min="0" max="15" step="1" name="unicast" id="unicast" value="15">
+                    <span id="unicastVal"></span>
+                    
+                    <br>
+                    
+                    <input type="checkbox" name="checkBroadcast" id="checkBroadcast" value=1>
+                    <label for="broadcast">Broadcast (Default: 3)</label>
+                    <input type="range" min="0" max="15" step="1" name="broadcast" id="broadcast" value="3">
+                    <span id="broadcastVal"></span>
+                    
+                    <br>
+                    
+                    <input type="checkbox" name="checkMesh" id="checkMesh" value=1>
+                    <label for="mesh">Mesh (Default: 1)</label>
+                    <input type="range" min="0" max="7" step="1" name="mesh" id="mesh" value="1">
+                    <span id="meshVal"></span>
+                </fieldset>
+              </div>
+
+              <div id="sleepCycleDiv" class="node-info-case">
+                <input type="checkbox" name="sleep" id="sleep" value=1>
+                <label for="sleep">Set node in sleep mode</label>
+              </div>
+
+              <div id="SleepCoordDiv" class="node-info-case">
+                <input type="checkbox" name="sleepCoord" id="sleepCoord" value=1>
+                <label for="sleepCoord">Set node as sleep coordinator</label>
+              </div>
+
+              <div id="sleepPeriodDiv" class="node-info">
+                <input type="checkbox" name="checkSleepPeriod" id="checkSleepPeriod" value=1>
+                <label for="sleepPeriod">Sleep Period (ms)</label>
+                <input type="text" name="sleepPeriod" id="sleepPeriod" class="form-control">
+              </div>
+
+              <div id="wakeTimeDiv" class="node-info">
+                <input type="checkbox" name="checkWakeTime" id="checkWakeTime" value=1>
+                <label for="wakeTime">Wake Time (ms)</label>
+                <input type="text" name="wakeTime" id="wakeTime" class="form-control">
+              </div>
+
+              <div id="ledStateDiv" class="node-info">
+                <input type="checkbox" name="checkLedState" id="checkLedState" value=1>
+                <label for="ledState">LED State</label>
+                <select name="ledState" id="ledState" class="form-control">
+                  <option value="none" selected>Select LED State</option>
+                  <option value=0>On</option>
+                  <option value=1>Off</option>
+                  <option value=2>Auto</option>
+                </select>
+              </div>
+
+              <div id="readParamDiv">
+                <fieldset>
+                  <legend>Request Parameters</legend>
+                    <input type="checkbox" name="readSleepTime" id="readSleepTime" value=1>
+                    <label for="readSleepTime">Sleep Time</label>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input type="checkbox" name="readSampling" id="readSampling" value=1>
+                    <label for="readSampling">Sampling Time</label>
+                    <br><br>
+
+                    <input type="checkbox" name="readPower" id="readPower" value=1>
+                    <label for="readPower">Power Level</label>
+                    &nbsp; &nbsp; &nbsp;
+                    <input type="checkbox" name="readLedState" id="readLedState" value=1>
+                    <label for="readLedState">LED State</label>
+                    <br><br>
+
+                    <input type="checkbox" name="readTHB" id="readTHB" value=1>
+                    <label for="readTHB">All sensors</label>
+                    &nbsp; &nbsp; &nbsp;
+                    <input type="checkbox" name="readTemp" id="readTemp" value=1>
+                    <label for="readTemp">Temperature</label>
+                    &nbsp; &nbsp; &nbsp;
+                    <input type="checkbox" name="readHumidity" id="readHumidity" value=1>
+                    <label for="readHumidity">Humidity</label>
+                    &nbsp; &nbsp; &nbsp;
+                    <input type="checkbox" name="readBattery" id="readBattery" value=1>
+                    <label for="readBattery">Battery</label>
+                </fieldset>
+              </div>
+
+              <div id="routingTableWrite">
+                <fieldset>
+                  <legend>Network Parameters</legend>
+                    <input type="checkbox" name="changeRoute" id="changeRoute" value=1>
+                    <label for="changeRoute">Change Route</label>
+                    <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="chFixed">Fixed: </label>
+                    <input type="text" name="chFixed" id="chFixed">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="chMult">Multicast: </label>
+                    <input type="text" name="chMult" id="chMult">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="chScore">Score: </label>
+                    <input type="text" name="chScore" id="chScore">
+                    <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="chDest">Dest: </label> &nbsp; 
+                    <input type="text" name="chDest" id="chDest">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="chNext">Next Hop: </label> 
+                    <input type="text" name="chNext" id="chNext">
+                    
+                    <br><br>
+                    <input type="checkbox" name="removeRoute" id="removeRoute" value=1>
+                    <label for="removeRoute">Remove Route</label>
+                    <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="rmDest">Dest: </label>
+                    <input type="text" name="rmDest" id="rmDest">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="rmMult">Multicast: </label>
+                    <input type="text" name="rmMult" id="rmMult">
+                </fieldset>
+              </div>
+
+
+              <div id="routingTableRead">
+                <fieldset>
+                  <legend>Network Parameters</legend>
+                    <input type="checkbox" name="routingTable" id="routingTable" value=1>
+                    <label for="routingTable">Routing table</label>
+
+                    <br><br>
+                    <input type="checkbox" name="linkQuality" id="linkQuality" value=1>
+                    <label for="linkQuality">Link Quality</label>
+                    <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="lqDest">Dest: </label>
+                    <input type="text" name="lqDest" id="lqDest">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="lqMult">Multicast: </label>
+                    <input type="text" name="lqMult" id="lqMult">
+                    
+                    <br><br>
+                    <input type="checkbox" name="routingState" id="routingState" value=1>
+                    <label for="routingState">Routing State</label>
+                    <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="stateDest">Dest: </label>
+                    <input type="text" name="stateDest" id="stateDest">
+                    &nbsp; &nbsp; &nbsp;
+                    <label for="stateMult">Multicast: </label>
+                    <input type="text" name="stateMult" id="stateMult">
+                    <br><br>
+                </fieldset>
+              </div>
+          </div>
+        </form>
+        
+        <br>
+        <div class="button-form">
+          <button id="resetForm" class="btn btn-success pull-right">Reset</button>
+          <button id="submitForm" class="btn btn-success pull-right">Submit</button>
+        </div>
+
+        <div id="readResponse"></div>
+        <div id="writeResponse"></div>
+      </fieldset>
+
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Connection to Client javascript -->
+    <script src="client_v2.js" type="text/javascript"></script>
+
+  </body>
+<html>
